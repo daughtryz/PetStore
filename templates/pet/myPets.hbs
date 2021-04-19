@@ -1,0 +1,16 @@
+{{>header}}
+<section id="my-pets-page" class="my-pets">
+            <h1>My Pets</h1>
+            <!-- Display ul: with list-items for every user's pet (if any) -->
+            {{#if pets}}
+            <ul class="my-pets-list">      
+                {{#each pets}}
+                {{>pet}}
+                {{/each}}
+            </ul>
+        <!-- Display paragraph: If the user doesn't have his own pets  -->
+            {{else}}
+            <p class="no-pets">No pets in database!</p>
+            {{/if}}
+        </section>
+{{>footer}}

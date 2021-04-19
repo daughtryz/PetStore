@@ -1,0 +1,24 @@
+<header id="site-header">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <section class="navbar-dashboard">
+                    <a href="#">Dashboard</a>
+                    <!-- Guest users -->
+                    {{#unless email}}
+                    <div id="guest">
+                        <a class="button" href="#/login">Login</a>
+                        <a class="button" href="#/register">Register</a>
+                    </div>
+                    {{/unless}}
+                    <!-- Logged-in users -->
+                    {{#if email}}
+                    <div id="user">
+                        <span>Welcome, {{email}}</span>
+                        <a class="button" href="#/myPets">My Pets</a>
+                        <a class="button" href="#/create">Add Pet</a>
+                        <a class="button" href="#/logout">Logout</a>
+                    </div>
+                    {{/if}}
+                </section>
+            </nav>
+        </header>

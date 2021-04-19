@@ -1,0 +1,16 @@
+{{>header}}
+<section id="dashboard-page" class="dashboard">
+            <h1>Dashboard</h1>
+            <!-- Display ul: with list-items for All pets (If any) -->
+             {{#if allPets}}
+            <ul class="other-pets-list">            
+                {{#each allPets}}
+                {{>pet}}
+                {{/each}}
+            </ul>
+            <!-- Display paragraph: If there are no pets in the database -->
+            {{else}}
+            <p class="no-pets">No pets in database!</p>
+            {{/if}}
+        </section>
+{{>footer}}
